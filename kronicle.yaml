@@ -20,3 +20,17 @@ components:
         description: |
           The User Service was previously owned by the Frontend team but it is now owned by the Identity team
     platform: kubernetes
+  - id: user-service-database
+    name: User Service Database
+    type: database
+    repo:
+      url: https://github.com/kronicle-computers/kronicle-computers-user-service.git
+    description: |
+      The database that holds the user account data for the [User Service](/components/user-service)
+    tags:
+      - backend
+    teams:
+      - teamId: identity
+    platform: kubernetes
+    dependencies:
+      - targetComponentId: main-mongodb-cluster
