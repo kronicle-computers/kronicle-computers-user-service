@@ -20,6 +20,9 @@ components:
         description: |
           The User Service was previously owned by the Frontend team but it is now owned by the Identity team
     platform: kubernetes
+    dependencies:
+      - targetComponentId: user-service-database
+      - targetComponentId: zipkin
   - id: user-service-database
     name: User Service Database
     type: database
