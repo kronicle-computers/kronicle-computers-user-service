@@ -1,2 +1,13 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+
+    plugins {
+        id "org.sonarqube" version "$sonarQubeVersion" apply false
+        id "org.owasp.dependencycheck" version "$dependencyCheckVersion" apply false
+        id "pl.allegro.tech.build.axion-release" version "$axionReleaseVersion" apply false
+    }
+}
 
 rootProject.name="kronicle-computers-user-service"

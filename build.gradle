@@ -4,14 +4,23 @@ plugins {
     id("com.github.johnrengelman.shadow") version "7.0.0"
     id("io.micronaut.application") version "2.0.6"
     id("org.jetbrains.kotlin.plugin.allopen") version "1.5.21"
+    id "org.sonarqube"
+    id "org.owasp.dependencycheck"
+    id "pl.allegro.tech.build.axion-release"
 }
 
-version = "0.1"
+version = scmVersion.version
 group = "shop.kroniclecomputers"
 
 repositories {
     mavenCentral()
 }
+
+apply from: "gradle/dependency-check.gradle"
+apply from: "gradle/jacoco.gradle"
+apply from: "gradle/kronicle-metadata.gradle"
+apply from: "gradle/sonarqube.gradle"
+
 
 micronaut {
     runtime("netty")

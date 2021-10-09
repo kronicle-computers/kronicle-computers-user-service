@@ -1,0 +1,39 @@
+# This file is read automatically by Kronicle https://kronicle.tech
+
+# The contents of this file is for Kronicle Computers, a fictional online computer shop, used as an example by
+# [Kronicle](https://kronicle.tech)
+
+components:
+  - id: user-service
+    name: User Service
+    type: microservice
+    repo:
+      url: https://github.com/kronicle-computers/kronicle-computers-user-service.git
+    description: |
+      The microservice that holds the user accounts for the customers of the fictional Kronicle Computer online shop
+    tags:
+      - backend
+    teams:
+      - teamId: identity
+      - teamId: frontend
+        type: previous
+        description: |
+          The User Service was previously owned by the Frontend team but it is now owned by the Identity team
+    platform: kubernetes
+    dependencies:
+      - targetComponentId: user-service-database
+      - targetComponentId: zipkin
+  - id: user-service-database
+    name: User Service Database
+    type: database
+    repo:
+      url: https://github.com/kronicle-computers/kronicle-computers-user-service.git
+    description: |
+      The database that holds the user account data for the [User Service](/components/user-service)
+    tags:
+      - backend
+    teams:
+      - teamId: identity
+    platform: kubernetes
+    dependencies:
+      - targetComponentId: main-mongodb-cluster

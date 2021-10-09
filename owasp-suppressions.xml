@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+    <!-- Supress a false positive for a vulnerability.  Dependency Check is mistaking a Micronaut JAR for a Netty JAR -->
+    <suppress>
+        <notes><![CDATA[
+   file name: micronaut-buffer-netty-3.1.0.jar
+   ]]></notes>
+        <sha1>196738a26d5e4e99b054b7a7d3e0ec77d28cd6a9</sha1>
+        <cpe>cpe:/a:netty:netty</cpe>
+    </suppress>
+    <!-- Supress a false positive for a vulnerability.  Dependency Check is mistaking a Micronaut JAR for a Netty JAR -->
+    <suppress>
+        <notes><![CDATA[
+   file name: micronaut-http-netty-3.1.0.jar
+   ]]></notes>
+        <sha1>bad3886a9b5aceb9ac76ba842931de246a28b641</sha1>
+        <cpe>cpe:/a:netty:netty</cpe>
+    </suppress>
+    <!-- Supress a false positive for a vulnerability.  Dependency Check is mistaking a Micronaut JAR for a Netty JAR -->
+    <suppress>
+        <notes><![CDATA[
+   file name: micronaut-http-server-netty-3.1.0.jar
+   ]]></notes>
+        <sha1>ce6c126609ec841495447a24807b3a0ba8e17b01</sha1>
+        <cpe>cpe:/a:netty:netty</cpe>
+    </suppress>
+</suppressions>
