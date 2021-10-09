@@ -2,11 +2,11 @@ apply plugin: 'org.sonarqube'
 
 sonarqube {
     properties {
-        property "sonar.projectKey", "kronicle-computers_user-service"
-        property "sonar.organization", "kronicle-computers"
+        property "sonar.DISABLEprojectKey", "kronicle-computers_user-service"
+        property "sonar.DISABLEorganization", "kronicle-computers"
         property 'sonar.host.url', sonarQubeHostUrl
 
-        property 'sonar.projectName', 'user-service'
+        property 'sonar.DISABLEprojectName', 'user-service'
         property 'sonar.projectVersion', version
         property 'sonar.links.homepage', websiteUrl
 
