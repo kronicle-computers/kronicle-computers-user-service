@@ -34,6 +34,7 @@ components:
       The database that holds the user account data for the [User Service](/components/user-service)
     tags:
       - backend
+      - customer-pii-at-rest
     teams:
       - teamId: identity
     platform: kubernetes
