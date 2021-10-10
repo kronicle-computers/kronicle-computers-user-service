@@ -4,9 +4,10 @@
 # [Kronicle](https://kronicle.tech)
 
 components:
+
   - id: user-service
     name: User Service
-    type: microservice
+    typeId: microservice
     repo:
       url: https://github.com/kronicle-computers/kronicle-computers-user-service.git
     description: |
@@ -23,9 +24,10 @@ components:
     dependencies:
       - targetComponentId: user-service-database
       - targetComponentId: zipkin
+
   - id: user-service-database
     name: User Service Database
-    type: database
+    typeId: mongodb-database
     repo:
       url: https://github.com/kronicle-computers/kronicle-computers-user-service.git
     description: |
