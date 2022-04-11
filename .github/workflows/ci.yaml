@@ -50,14 +50,14 @@ jobs:
           ./gradlew "${extra_tasks[@]}" build
 
       - name: Archive Dependency Check report 🗄️
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: success() || failure()
         with:
           name: dependency-check-report
           path: '**/build/reports/dependency-check-report.html'
 
       - name: Archive JUnit test reports 🗄️
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: success() || failure()
         with:
           name: dependency-check-report
